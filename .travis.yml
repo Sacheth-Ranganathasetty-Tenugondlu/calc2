@@ -6,7 +6,6 @@ install:
 # command to run tests
 script:
   - pytest  --pylint --cov
-
 branches:
   only:
     - main
