@@ -1,4 +1,5 @@
 """Testing the Calculator"""
+import pytest
 from calculator.main import Calculator
 
 def test_calculator_result():
