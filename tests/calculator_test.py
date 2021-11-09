@@ -42,7 +42,7 @@ def test_calculator_division():
     assert result == 1
 
 def test_calculator_division_exception():
-    """ Testing division exception for division by zero"""
+    """ Testing division exception for division by 0"""
     # Arrange
     value_a = 1
     value_b = 0
