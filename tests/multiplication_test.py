@@ -1,11 +1,11 @@
-from calc.multiplication import Multiplication
+"""Testing Multiplication"""
+from calc.calculations.multiplication import Multiplication
 
-
-def test_multiplication_create():
-    calc_obj = Multiplication.create((1, 2))
-    assert isinstance(calc_obj, Multiplication)
-
-
-def test_multiplication_get_result():
-    calc_obj = Multiplication.create((3, 4))
-    assert calc_obj.get_result() == 12
+def test_calculation_multiplication():
+    """testing that our calculator has a static method for multiplication"""
+    #Arrange
+    mynumbers = (1.0,2.0,3.0)
+    multiplication = Multiplication(mynumbers)
+    #Act
+    #Assert
+    assert multiplication.get_result() == 6.0

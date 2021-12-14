@@ -1,5 +1,5 @@
 """Addition Class"""
-from calc.calculations.calculation import Calculation
+from calc.calculations.calculations  import Calculation
 
 class Addition(Calculation):
     """ calculation addition class"""
@@ -9,4 +9,3 @@ class Addition(Calculation):
         for value in self.values:
             sum_of_values = value + sum_of_values
         return sum_of_values
-    

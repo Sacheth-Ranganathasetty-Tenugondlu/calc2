@@ -1,8 +1,8 @@
 """Multiplication Class"""
-from calc.calculations.calculation import Calculation
+from calc.calculations.calculations import Calculation
 
 class Multiplication(Calculation):
-    """Multiplication calculation object"""
+    """subtraction calculation object"""
     def get_result(self):
         """get the multiplication results"""
         result = 1.0

@@ -1,11 +1,11 @@
-from calc.addition import Addition
+"""Testing Addition"""
+from calc.calculations.addition import Addition
 
-
-def test_addition_create():
-    calc_obj = Addition.create((1, 2, 3))
-    assert isinstance(calc_obj, Addition)
-
-
-def test_addition_get_result():
-    calc_obj = Addition.create((1, 2, 3))
-    assert calc_obj.get_result() == 6
+def test_calculation_addition():
+    """testing that our calculator has a static method for addition"""
+    #Arrange
+    mynumbers = (1.0,2.0,3.0,4.0)
+    addition = Addition(mynumbers)
+    #Act
+    #Assert
+    assert addition.get_result() == 10.

@@ -1,74 +1,62 @@
 """ This is the increment function"""
-
-from typing import List
 from calc.addition import Addition
-from calc.calculation import Calculation
-from calc.division import Division
 from calc.subtraction import Subtraction
 from calc.multiplication import Multiplication
+from calc.division import Division
 
-
-class Calculator:
+class   Calculator:
     """ This is the Calculator class"""
-    # this is the calculator static property
-    history: List[Calculation] = []
 
-    @staticmethod
-    def get_history():
-        return Calculator.history
-
-    @staticmethod
-    def get_first_calculation():
-        return Calculator.history[0]
-
-    @staticmethod
-    def get_last_calculation():
-        return Calculator.get_last_calculation_object()
+    history = []
 
     @staticmethod
     def add_calculation_to_history(calculation):
+        """Adding the results to the history array"""
         Calculator.history.append(calculation)
 
     @staticmethod
     def get_last_calculation_result():
-        return Calculator.get_last_calculation_object().get_result()
+        """Getting the latest result from history array"""
+        # -1 index gets the last item added to history
+        return Calculator.history[-1].get_result()
 
     @staticmethod
     def get_last_calculation_object():
+        """Creating object for the latest result in the history array"""
         return Calculator.history[-1]
 
     @staticmethod
     def clear_history():
+        """Clearing the results history array and getting the count of the history indexes"""
         Calculator.history.clear()
+        return Calculator.count_history()
 
     @staticmethod
-    def get_history_count():
+    def count_history():
+        """Calculating the length of the history array"""
         return len(Calculator.history)
 
     @staticmethod
-    def add_number(values):
-        """ adds number to result"""
-        addition = Addition.create(values)
-        Calculator.add_calculation_to_history(addition)
+    def add_number(value_a, value_b):
+        """ Creating Constructor"""
+        #This is using a factory create method to return an instance of the class
+        Calculator.add_calculation_to_history(Addition.create(value_a,value_b))
         return Calculator.get_last_calculation_result()
 
     @staticmethod
-    def subtract_number(values):
-        """ subtract number from result"""
-        subtraction = Subtraction.create(values)
-        Calculator.add_calculation_to_history(subtraction)
+    def subtract_number(value_a, value_b):
+        """ subtract two numbers and store the result"""
+        Calculator.add_calculation_to_history(Subtraction.create(value_a,value_b))
         return Calculator.get_last_calculation_result()
 
     @staticmethod
-    def multiply_numbers(values):
+    def multiply_numbers( value_a, value_b):
         """ multiply two numbers and store the result"""
-        multiplication = Multiplication.create(values)
-        Calculator.add_calculation_to_history(multiplication)
+        Calculator.add_calculation_to_history(Multiplication.create(value_a,value_b))
         return Calculator.get_last_calculation_result()
 
     @staticmethod
-    def divide_numbers(values):
+    def divide_numbers( value_a, value_b):
         """ divide two numbers and store the result"""
-        division = Division.create(values)
-        Calculator.add_calculation_to_history(division)
+        Calculator.add_calculation_to_history(Division.create(value_a, value_b))
         return Calculator.get_last_calculation_result()
