@@ -13,4 +13,4 @@ pytest  --pylint --cov
 setup.py is a config file for pytest
 # Project 3 Demo YouTube Link:
 https://youtu.be/eAmu7lHbMbI
-# Team: Sriraksha & Sacheth
+# Team: Sacheth & Sriraksha
