@@ -12,7 +12,7 @@ pytest  --pylint --cov
 .coveragerc is the config for coverage
 setup.py is a config file for pytest
 # Project 3 Demo YouTube Link:
-https://youtu.be/To3U3-SiZiw
+https://youtu.be/zGCsvqYJ_PY
 # Team: Sacheth & Sriraksha
-# Screenshot of error message
-![abb](https://github.com/Sacheth-Ranganathasetty-Tenugondlu/calc2/blob/c0788bd48926dcad5faba05ebf20ea0946ab38d3/Screen%20Shot%202021-12-16%20at%2011.40.19%20AM.png)
+# Error Message when no Input entered:
+![img](https://github.com/SRIRAKSHA-SARATHI/calc2/blob/ab20f720f85a97068328161fb3847784ea821402/Screen%20Shot%202021-12-17%20at%201.14.20%20AM.png)
